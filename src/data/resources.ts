@@ -47,21 +47,6 @@ export const resources: Resource[] = [
     link: 'https://claude.ai'
   },
   {
-    id: 'free-landing-page-builder',
-    name: 'Free Landing Page Builder',
-    icon: 'https://cdn-icons-png.flaticon.com/512/888/888859.png',
-    value: '',
-    description: 'Free landing page builder :)',
-    tags: [
-      { name: 'NEW', color: 'yellow', category: 'Web Development' },
-      { name: 'Web Infrastructure', color: 'blue', category: 'Web Infrastructure' },
-      { name: 'Startups', color: 'orange', category: 'Startups' }
-    ],
-    category: 'free-stuff',
-    link: '#',
-    isNew: true
-  },
-  {
     id: 'openai-credits',
     name: 'OpenAI Credits',
     icon: 'https://openai.com/favicon.ico',
