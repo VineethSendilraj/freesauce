@@ -15,56 +15,63 @@ const ResourceCard = ({ resource }: ResourceCardProps) => {
   }
 
   return (
-    <Card className="w-full hover:shadow-lg transition-all duration-200 border-gray-200">
-      <CardContent className="p-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-6 items-start">
-          {/* Resource Info */}
-          <div className="lg:col-span-3 flex items-center gap-3">
-            <div className="text-2xl flex-shrink-0">
-              {resource.icon}
+    <div className="group relative bg-white rounded-2xl border border-gray-200/60 hover:border-gray-300/80 hover:shadow-lg transition-all duration-300 overflow-hidden h-full">
+      <div className="p-6 flex flex-col h-full">
+        {/* Header: Logo, Name & Value */}
+        <div className="flex items-start justify-between gap-4 mb-4">
+          <div className="flex items-center gap-3 flex-1 min-w-0">
+            <div className="w-10 h-10 flex-shrink-0 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
+              <img 
+                src={resource.icon} 
+                alt={`${resource.name} logo`}
+                className="w-6 h-6 object-contain"
+                onError={(e) => {
+                  // Fallback to a generic icon if image fails to load
+                  e.currentTarget.style.display = 'none';
+                  e.currentTarget.nextElementSibling?.classList.remove('hidden');
+                }}
+              />
+              <div className="hidden w-6 h-6 bg-gray-300 rounded flex items-center justify-center text-gray-600 text-xs font-bold">
+                {resource.name.charAt(0)}
+              </div>
             </div>
             <div className="min-w-0 flex-1">
-              <h3 className="font-semibold text-gray-900 truncate">
+              <h3 className="font-semibold text-gray-900 text-lg leading-tight truncate">
                 {resource.name}
               </h3>
             </div>
           </div>
-
-          {/* Value */}
-          <div className="lg:col-span-2">
-            <span className="font-semibold text-gray-900">
-              {resource.value || '—'}
-            </span>
-          </div>
-
-          {/* Tags */}
-          <div className="lg:col-span-4">
-            <div className="flex flex-wrap gap-2">
-              {resource.tags.map((tag, index) => (
-                <TagBadge key={index} tag={tag} />
-              ))}
+          
+          {resource.value && (
+            <div className="text-right flex-shrink-0">
+              <span className="text-lg font-semibold text-gray-900">
+                {resource.value}
+              </span>
             </div>
-          </div>
-
-          {/* Description */}
-          <div className="lg:col-span-2">
-            <p className="text-sm text-gray-600 leading-relaxed">
-              {resource.description}
-            </p>
-          </div>
-
-          {/* Apply Button */}
-          <div className="lg:col-span-1 flex justify-end">
-            <Button 
-              onClick={handleApplyClick}
-              className="bg-black hover:bg-gray-800 text-white px-4 py-2 text-sm font-medium"
-            >
-              Apply Now
-            </Button>
-          </div>
+          )}
         </div>
-      </CardContent>
-    </Card>
+
+        {/* Description */}
+        <p className="text-sm text-gray-500 leading-relaxed mb-4 flex-1">
+          {resource.description}
+        </p>
+
+        {/* Tags */}
+        <div className="flex flex-wrap gap-2 mb-4">
+          {resource.tags.map((tag, index) => (
+            <TagBadge key={index} tag={tag} />
+          ))}
+        </div>
+
+        {/* Apply Button */}
+        <Button 
+          onClick={handleApplyClick}
+          className="bg-blue-500 hover:bg-blue-600 text-white px-5 py-2.5 text-sm font-medium rounded-full transition-colors duration-200 w-full"
+        >
+          Apply Now
+        </Button>
+      </div>
+    </div>
   )
 }
 

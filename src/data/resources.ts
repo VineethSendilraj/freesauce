@@ -4,7 +4,7 @@ export const resources: Resource[] = [
   {
     id: 'firecrawl',
     name: 'Firecrawl',
-    icon: '🔥',
+    icon: 'https://firecrawl.dev/favicon.ico',
     value: '$100+',
     description: '20k free credits and full API access with educational email',
     tags: [
@@ -14,13 +14,13 @@ export const resources: Resource[] = [
       { name: 'Web Scraping', color: 'green', category: 'Web Development' }
     ],
     category: 'free-stuff',
-    link: '#',
+    link: 'https://firecrawl.dev',
     isNew: true
   },
   {
     id: 'free-framer-pro',
     name: 'Free Framer Pro',
-    icon: '🎨',
+    icon: 'https://framer.com/favicon.ico',
     value: '$180',
     description: 'Framer is free for students! Just use your school email',
     tags: [
@@ -30,13 +30,13 @@ export const resources: Resource[] = [
       { name: 'Productivity', color: 'green', category: 'Productivity' }
     ],
     category: 'free-stuff',
-    link: '#',
+    link: 'https://framer.com/pricing',
     isNew: true
   },
   {
     id: 'claude-credits',
     name: 'Claude Credits',
-    icon: '🤖',
+    icon: 'https://claude.ai/favicon.ico',
     value: '$50',
     description: 'Get free Claude AI credits for your projects',
     tags: [
@@ -44,12 +44,12 @@ export const resources: Resource[] = [
       { name: 'AI', color: 'purple', category: 'AI' }
     ],
     category: 'free-stuff',
-    link: '#'
+    link: 'https://claude.ai'
   },
   {
     id: 'free-landing-page-builder',
     name: 'Free Landing Page Builder',
-    icon: '🚀',
+    icon: 'https://cdn-icons-png.flaticon.com/512/888/888859.png',
     value: '',
     description: 'Free landing page builder :)',
     tags: [
@@ -64,7 +64,7 @@ export const resources: Resource[] = [
   {
     id: 'openai-credits',
     name: 'OpenAI Credits',
-    icon: '🧠',
+    icon: 'https://openai.com/favicon.ico',
     value: '$1000',
     description: 'Via Microsoft for Startups (Azure)',
     tags: [
@@ -72,24 +72,24 @@ export const resources: Resource[] = [
       { name: 'AI', color: 'purple', category: 'AI' }
     ],
     category: 'free-stuff',
-    link: '#'
+    link: 'https://openai.com'
   },
   {
     id: 'free-cursor-pro',
     name: 'Free Cursor Pro (1 Year)',
-    icon: '💻',
+    icon: 'https://cursor.sh/favicon.ico',
     value: '$240',
     description: 'Sign up with .edu email',
     tags: [
       { name: 'AI', color: 'purple', category: 'AI' }
     ],
     category: 'free-stuff',
-    link: '#'
+    link: 'https://cursor.sh'
   },
   {
     id: 'google-veo-3',
     name: 'Google Veo 3 AI Video Generator',
-    icon: '🎬',
+    icon: 'https://www.google.com/favicon.ico',
     value: '$240/year',
     description: 'Free via Google AI Pro for students through finals 2026',
     tags: [
@@ -98,12 +98,12 @@ export const resources: Resource[] = [
       { name: 'Productivity', color: 'green', category: 'Productivity' }
     ],
     category: 'free-stuff',
-    link: '#'
+    link: 'https://labs.google.com'
   },
   {
     id: 'screen-studio',
     name: 'Screen Studio',
-    icon: '📹',
+    icon: 'https://screenstudio.lemonsqueezy.com/favicon.ico',
     value: '$100+',
     description: '40% off with student email',
     tags: [
@@ -111,12 +111,12 @@ export const resources: Resource[] = [
       { name: 'Video Creation', color: 'red', category: 'Video Creation' }
     ],
     category: 'free-stuff',
-    link: '#'
+    link: 'https://screenstudio.lemonsqueezy.com'
   },
   {
     id: 'free-notion-plus',
     name: 'Free Notion Plus w/ AI',
-    icon: '📝',
+    icon: 'https://notion.so/favicon.ico',
     value: '',
     description: 'Via Github Student Dev Pack',
     tags: [
@@ -124,12 +124,12 @@ export const resources: Resource[] = [
       { name: 'AI', color: 'purple', category: 'AI' }
     ],
     category: 'free-stuff',
-    link: '#'
+    link: 'https://notion.so'
   },
   {
     id: 'free-figma-pro',
     name: 'Free Figma Pro',
-    icon: '🎨',
+    icon: 'https://figma.com/favicon.ico',
     value: '$144/year',
     description: 'Sign up with .edu email',
     tags: [
@@ -137,6 +137,6 @@ export const resources: Resource[] = [
       { name: 'AI', color: 'purple', category: 'AI' }
     ],
     category: 'free-stuff',
-    link: '#'
+    link: 'https://figma.com'
   }
 ] 

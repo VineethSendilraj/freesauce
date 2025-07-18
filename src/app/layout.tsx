@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -21,12 +22,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} font-sans antialiased bg-gray-50`}
+        className={`${inter.variable} font-sans antialiased`}
       >
         <Header />
         <main className="min-h-screen">
           {children}
         </main>
+        <Analytics />
       </body>
     </html>
   );

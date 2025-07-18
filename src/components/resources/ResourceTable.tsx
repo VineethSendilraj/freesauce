@@ -2,67 +2,103 @@
 
 import { useState, useMemo } from "react"
 import ResourceCard from "./ResourceCard"
+import ResourceListItem from "./ResourceListItem"
 import FilterTabs from "./FilterTabs"
+import SearchBar from "./SearchBar"
+import ViewToggle from "./ViewToggle"
 import { resources } from "@/data/resources"
-import type { CategoryFilter } from "@/lib/types"
+import type { CategoryFilter as CategoryFilterType } from "@/lib/types"
 
 const ResourceTable = () => {
-  const [activeFilter, setActiveFilter] = useState<CategoryFilter>('all')
+  const [activeFilter, setActiveFilter] = useState<CategoryFilterType>('all')
+  const [searchQuery, setSearchQuery] = useState<string>("")
+  const [view, setView] = useState<'list' | 'grid'>('grid')
 
   const filteredResources = useMemo(() => {
-    if (activeFilter === 'all') {
-      return resources
-    }
-    return resources.filter(resource => resource.category === activeFilter)
-  }, [activeFilter])
+    let filtered = resources
 
-  const handleFilterChange = (filter: CategoryFilter) => {
+    // Filter by main category (All, Free Stuff, Fellowships)
+    if (activeFilter !== 'all') {
+      filtered = filtered.filter(resource => resource.category === activeFilter)
+    }
+
+    // Filter by search query (name, description, tags)
+    if (searchQuery.trim()) {
+      const query = searchQuery.toLowerCase().trim()
+      filtered = filtered.filter(resource => 
+        resource.name.toLowerCase().includes(query) ||
+        resource.description.toLowerCase().includes(query) ||
+        resource.tags.some(tag => 
+          tag.name.toLowerCase().includes(query) ||
+          tag.category.toLowerCase().includes(query)
+        )
+      )
+    }
+
+    return filtered
+  }, [activeFilter, searchQuery])
+
+  const handleFilterChange = (filter: CategoryFilterType) => {
     setActiveFilter(filter)
+  }
+
+  const handleSearch = (query: string) => {
+    setSearchQuery(query)
   }
 
   return (
     <div className="w-full space-y-8">
-      {/* Filter Tabs */}
-      <div className="flex justify-start">
-        <FilterTabs 
-          activeFilter={activeFilter} 
-          onFilterChange={handleFilterChange} 
-        />
+      {/* Search Bar */}
+      <SearchBar onSearch={handleSearch} />
+
+      {/* View Toggle - Right Aligned */}
+      <div className="flex justify-end">
+        <ViewToggle view={view} onViewChange={setView} />
       </div>
 
-      {/* Table Header - Desktop Only */}
-      <div className="hidden lg:block">
-        <div className="grid grid-cols-12 gap-6 px-6 py-4 border border-gray-200 bg-gray-50/50 rounded-lg mb-4">
-          <div className="col-span-3 text-sm font-semibold text-gray-700">
-            Resource
-          </div>
-          <div className="col-span-2 text-sm font-semibold text-gray-700">
-            Value
-          </div>
-          <div className="col-span-4 text-sm font-semibold text-gray-700">
-            Tags
-          </div>
-          <div className="col-span-2 text-sm font-semibold text-gray-700">
-            Description
-          </div>
-          <div className="col-span-1 text-sm font-semibold text-gray-700 text-right">
-            Action
+      {/* Table Header - List View Only */}
+      {view === 'list' && (
+        <div className="hidden lg:block">
+          <div className="bg-white border border-gray-200/60 rounded-xl p-4 shadow-sm">
+            <div className="grid grid-cols-12 gap-6">
+              <div className="col-span-3 text-sm font-semibold text-gray-800">
+                Resource
+              </div>
+              <div className="col-span-4 text-sm font-semibold text-gray-800">
+                Description
+              </div>
+              <div className="col-span-3 text-sm font-semibold text-gray-800">
+                Tags
+              </div>
+              <div className="col-span-1 text-sm font-semibold text-gray-800 text-center">
+                Value
+              </div>
+              <div className="col-span-1 text-sm font-semibold text-gray-800 text-center">
+                Action
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      )}
 
       {/* Resources */}
-      <div className="space-y-4">
-        {filteredResources.length === 0 ? (
-          <div className="text-center py-12">
-            <p className="text-gray-500">No resources found for this category.</p>
-          </div>
-        ) : (
-          filteredResources.map((resource) => (
+      {filteredResources.length === 0 ? (
+        <div className="text-center py-12">
+          <p className="text-gray-500">No resources found for this category.</p>
+        </div>
+      ) : view === 'grid' ? (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredResources.map((resource) => (
             <ResourceCard key={resource.id} resource={resource} />
-          ))
-        )}
-      </div>
+          ))}
+        </div>
+      ) : (
+        <div className="space-y-2">
+          {filteredResources.map((resource) => (
+            <ResourceListItem key={resource.id} resource={resource} />
+          ))}
+        </div>
+      )}
     </div>
   )
 }
