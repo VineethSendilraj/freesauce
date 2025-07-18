@@ -9,8 +9,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Free Stuff for College Builders",
-  description: "Discover free tools, credits, and resources for college students building projects",
+  title: "Builder Sauce | FreeSauce",
+  description: "Discover free tools, credits, and resources for builders creating amazing projects",
 };
 
 export default function RootLayout({

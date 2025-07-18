@@ -6,11 +6,11 @@ export default function Home() {
       {/* Hero Section */}
       <div className="mb-12 text-center">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Free Stuff for College Builders
+          Builder Sauce
         </h1>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
           Discover amazing free tools, credits, and resources to help you build your next project. 
-          From AI APIs to design tools, we&apos;ve curated the best free resources for college students.
+          From AI APIs to design tools, we&apos;ve curated the best free resources for builders.
         </p>
       </div>
 

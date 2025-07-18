@@ -10,7 +10,7 @@ const Header = () => {
             <div className="flex items-center gap-2">
               <GraduationCap className="h-6 w-6 text-gray-800" />
               <span className="text-lg font-semibold text-gray-800">
-                Build in College
+                FreeSauce
               </span>
             </div>
           </div>
