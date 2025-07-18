@@ -16,44 +16,44 @@ const ResourceCard = ({ resource }: ResourceCardProps) => {
 
   return (
     <div className="group relative bg-gradient-to-br from-white to-gray-50/30 rounded-3xl border border-gray-200/40 hover:border-gray-300/60 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden h-full">
-      <div className="p-8 flex flex-col h-full">
+      <div className="p-6 flex flex-col h-full">
         {/* Header: Logo & Value */}
-        <div className="flex items-start justify-between mb-6">
-          <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-gray-100 to-gray-200/50 border border-gray-200/60 flex items-center justify-center shadow-sm">
+        <div className="flex items-start justify-between mb-4">
+          <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-gray-100 to-gray-200/50 border border-gray-200/60 flex items-center justify-center shadow-sm">
             <img 
               src={resource.icon} 
               alt={`${resource.name} logo`}
-              className="w-8 h-8 object-contain"
+              className="w-6 h-6 object-contain"
               onError={(e) => {
                 // Fallback to a generic icon if image fails to load
                 e.currentTarget.style.display = 'none';
                 e.currentTarget.nextElementSibling?.classList.remove('hidden');
               }}
             />
-            <div className="hidden w-8 h-8 bg-gray-300 rounded-xl flex items-center justify-center text-gray-600 text-sm font-bold">
+            <div className="hidden w-6 h-6 bg-gray-300 rounded-lg flex items-center justify-center text-gray-600 text-xs font-bold">
               {resource.name.charAt(0)}
             </div>
           </div>
           
           {resource.value && (
-            <div className="px-3 py-1.5 bg-gray-900 text-white text-sm font-semibold rounded-full">
+            <div className="px-2.5 py-1 bg-gray-900 text-white text-xs font-semibold rounded-full">
               {resource.value}
             </div>
           )}
         </div>
 
         {/* Title */}
-        <h3 className="font-bold text-xl text-gray-900 leading-tight mb-3">
+        <h3 className="font-bold text-base text-gray-900 leading-tight mb-2">
           {resource.name}
         </h3>
 
         {/* Description */}
-        <p className="text-gray-600 leading-relaxed mb-6 flex-1 text-sm">
+        <p className="text-gray-600 leading-relaxed mb-4 flex-1 text-xs">
           {resource.description}
         </p>
 
         {/* Tags */}
-        <div className="flex flex-wrap gap-2 mb-6">
+        <div className="flex flex-wrap gap-1.5 mb-4">
           {resource.tags.slice(0, 3).map((tag, index) => (
             <TagBadge key={index} tag={tag} className="text-xs" />
           ))}
@@ -67,7 +67,7 @@ const ResourceCard = ({ resource }: ResourceCardProps) => {
         {/* Apply Button */}
         <Button 
           onClick={handleApplyClick}
-          className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-6 py-3 text-sm font-semibold rounded-2xl transition-all duration-200 w-full shadow-lg hover:shadow-xl"
+          className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-4 py-2.5 text-xs font-semibold rounded-xl transition-all duration-200 w-full shadow-lg hover:shadow-xl"
         >
           Apply Now
         </Button>

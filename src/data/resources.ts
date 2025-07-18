@@ -20,7 +20,7 @@ export const resources: Resource[] = [
   {
     id: 'free-framer-pro',
     name: 'Free Framer Pro',
-    icon: 'https://framer.com/favicon.ico',
+    icon: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiBmaWxsPSIjMDAwMDAwIi8+CjxwYXRoIGQ9Ik0yMiA4SDE0VjE2SDIyTDE2IDIySDhWMTZIMTZWOEg4IiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K',
     value: '$180',
     description: 'Framer is free for students! Just use your school email',
     tags: [
@@ -88,7 +88,7 @@ export const resources: Resource[] = [
   {
     id: 'screen-studio',
     name: 'Screen Studio',
-    icon: 'https://screenstudio.lemonsqueezy.com/favicon.ico',
+    icon: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTYiIGZpbGw9InVybCgjZ3JhZGllbnQwXzFfMSkiLz4KPGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTAiIGZpbGw9IndoaXRlIi8+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWRpZW50MF8xXzEiIHgxPSIxNiIgeTE9IjAiIHgyPSIxNiIgeTI9IjMyIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CjxzdG9wIHN0b3AtY29sb3I9IiM5MzMzRUEiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjNkIyMUQ4Ii8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPC9zdmc+',
     value: '$100+',
     description: '40% off with student email',
     tags: [
@@ -101,7 +101,7 @@ export const resources: Resource[] = [
   {
     id: 'free-notion-plus',
     name: 'Free Notion Plus w/ AI',
-    icon: 'https://notion.so/favicon.ico',
+    icon: 'https://www.notion.so/images/favicon.ico',
     value: '',
     description: 'Via Github Student Dev Pack',
     tags: [
@@ -114,7 +114,7 @@ export const resources: Resource[] = [
   {
     id: 'free-figma-pro',
     name: 'Free Figma Pro',
-    icon: 'https://figma.com/favicon.ico',
+    icon: 'https://static.figma.com/app/icon/1/favicon.ico',
     value: '$144/year',
     description: 'Sign up with .edu email',
     tags: [

@@ -58,24 +58,22 @@ const ResourceTable = () => {
 
       {/* Table Header - List View Only */}
       {view === 'list' && (
-        <div className="hidden lg:block">
-          <div className="bg-white border border-gray-200/60 rounded-xl p-4 shadow-sm">
-            <div className="grid grid-cols-12 gap-6">
-              <div className="col-span-3 text-sm font-semibold text-gray-800">
-                Resource
-              </div>
-              <div className="col-span-4 text-sm font-semibold text-gray-800">
-                Description
-              </div>
-              <div className="col-span-3 text-sm font-semibold text-gray-800">
-                Tags
-              </div>
-              <div className="col-span-1 text-sm font-semibold text-gray-800 text-center">
-                Value
-              </div>
-              <div className="col-span-1 text-sm font-semibold text-gray-800 text-center">
-                Action
-              </div>
+        <div className="hidden lg:block mb-2">
+          <div className="grid grid-cols-12 gap-4 px-3">
+            <div className="col-span-3 text-xs font-bold text-gray-700 uppercase tracking-wider">
+              Resource
+            </div>
+            <div className="col-span-4 text-xs font-bold text-gray-700 uppercase tracking-wider">
+              Description
+            </div>
+            <div className="col-span-3 text-xs font-bold text-gray-700 uppercase tracking-wider">
+              Tags
+            </div>
+            <div className="col-span-1 text-xs font-bold text-gray-700 uppercase tracking-wider text-center">
+              Value
+            </div>
+            <div className="col-span-1 text-xs font-bold text-gray-700 uppercase tracking-wider text-center">
+              Action
             </div>
           </div>
         </div>

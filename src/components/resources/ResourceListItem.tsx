@@ -14,27 +14,27 @@ const ResourceListItem = ({ resource }: ResourceListItemProps) => {
   }
 
   return (
-    <div className="group bg-white border border-gray-200/60 hover:border-gray-300/80 hover:shadow-md transition-all duration-200 rounded-xl overflow-hidden">
-      <div className="p-5">
-        <div className="grid grid-cols-12 gap-6 items-center">
+    <div className="group bg-white border border-gray-200/40 hover:border-gray-300/60 hover:shadow-sm transition-all duration-200 rounded-lg overflow-hidden">
+      <div className="p-3">
+        <div className="grid grid-cols-12 gap-4 items-center">
           {/* Resource (Logo & Name) */}
-          <div className="col-span-3 flex items-center gap-3 min-w-0">
-            <div className="w-10 h-10 flex-shrink-0 rounded-lg overflow-hidden bg-gray-50 flex items-center justify-center border border-gray-200/60">
+          <div className="col-span-3 flex items-center gap-2 min-w-0">
+            <div className="w-8 h-8 flex-shrink-0 rounded-md overflow-hidden bg-gray-50 flex items-center justify-center border border-gray-200/40">
               <img 
                 src={resource.icon} 
                 alt={`${resource.name} logo`}
-                className="w-6 h-6 object-contain"
+                className="w-5 h-5 object-contain"
                 onError={(e) => {
                   e.currentTarget.style.display = 'none';
                   e.currentTarget.nextElementSibling?.classList.remove('hidden');
                 }}
               />
-              <div className="hidden w-6 h-6 bg-gray-300 rounded flex items-center justify-center text-gray-600 text-xs font-bold">
+              <div className="hidden w-5 h-5 bg-gray-300 rounded flex items-center justify-center text-gray-600 text-xs font-bold">
                 {resource.name.charAt(0)}
               </div>
             </div>
             <div className="min-w-0">
-              <h3 className="font-semibold text-gray-900 text-base leading-tight">
+              <h3 className="font-medium text-gray-900 text-sm leading-tight">
                 {resource.name}
               </h3>
             </div>
