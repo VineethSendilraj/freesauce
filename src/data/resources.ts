@@ -20,7 +20,7 @@ export const resources: Resource[] = [
   {
     id: 'free-framer-pro',
     name: 'Free Framer Pro',
-    icon: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiBmaWxsPSIjMDAwMDAwIi8+CjxwYXRoIGQ9Ik0yMiA4SDE0VjE2SDIyTDE2IDIySDhWMTZIMTZWOEg4IiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K',
+    icon: '/framer.png',
     value: '$180',
     description: 'Framer is free for students! Just use your school email',
     tags: [
