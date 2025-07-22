@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 const Header = () => {
   const handleSubmitResource = () => {
     // Replace with actual Google Form URL
-    window.open('https://forms.google.com/your-form-url', '_blank', 'noopener,noreferrer')
+    window.open('https://forms.gle/fLe5ZLhi9ihfx27t5', '_blank', 'noopener,noreferrer')
   }
 
   return (
