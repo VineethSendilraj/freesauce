@@ -120,3 +120,14 @@
     @apply bg-background text-foreground;
   }
 }
+
+.upside-down {
+  transform: rotate(180deg) translateZ(0);
+  transform-origin: center;
+}
+
+@media print {
+  .upside-down {
+    transform: none;
+  }
+}
