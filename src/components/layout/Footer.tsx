@@ -35,11 +35,11 @@ const Footer = () => {
   ]
 
   return (
-    <footer className="bg-white border-t border-gray-200/40 mt-16">
+    <footer className="bg-background border-t border-border mt-16">
       <div className="container mx-auto px-6 py-4 max-w-6xl">
         <div className="flex items-center justify-center">
           <div className="flex items-center gap-4">
-            <span className="text-sm text-gray-500">@vinnysaucee</span>
+            <span className="text-sm text-muted-foreground">@vinnysaucee</span>
             <div className="flex items-center gap-3">
               {socialLinks.map((social) => (
                 <a
@@ -47,7 +47,7 @@ const Footer = () => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-gray-600 transition-colors duration-200"
+                  className="text-muted-foreground hover:text-foreground transition-colors duration-200"
                   aria-label={social.name}
                 >
                   {social.icon}
