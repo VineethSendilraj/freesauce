@@ -38,7 +38,7 @@ const CategoryFilter = ({ onCategoryFilter }: CategoryFilterProps) => {
             (category === "All Categories" && selectedCategory === null) ||
             (category === selectedCategory)
               ? 'bg-blue-500 text-white shadow-sm'
-              : 'bg-gray-100 text-gray-600 hover:bg-gray-200 hover:text-gray-900'
+              : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-gray-100'
           }`}
         >
           {category}
