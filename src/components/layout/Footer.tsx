@@ -1,6 +1,7 @@
 "use client"
 
 import { Instagram, Linkedin } from "lucide-react"
+import LabubuDecorator from "./LabubuDecorator"
 
 const Footer = () => {
   const socialLinks = [
@@ -37,8 +38,8 @@ const Footer = () => {
   return (
     <footer className="bg-white border-t border-gray-200/40 mt-16">
       <div className="container mx-auto px-6 py-4 max-w-6xl">
-        <div className="flex items-center justify-center">
-          <div className="flex items-center gap-4">
+        <div className="flex flex-col items-center justify-center">
+          <div className="flex items-center gap-4 mb-2">
             <span className="text-sm text-gray-500">@vinnysaucee</span>
             <div className="flex items-center gap-3">
               {socialLinks.map((social) => (
@@ -55,6 +56,7 @@ const Footer = () => {
               ))}
             </div>
           </div>
+          <LabubuDecorator />
         </div>
       </div>
     </footer>
