@@ -11,19 +11,19 @@ const TagBadge = ({ tag, className }: TagBadgeProps) => {
   const getTagStyles = (color: Tag['color']) => {
     switch (color) {
       case 'yellow':
-        return "bg-amber-50 text-amber-700 border-amber-200/50"
+        return "bg-amber-50 text-amber-700 border-amber-200/50 dark:bg-amber-900/20 dark:text-amber-300 dark:border-amber-700/50"
       case 'blue':
-        return "bg-blue-50 text-blue-700 border-blue-200/50"
+        return "bg-blue-50 text-blue-700 border-blue-200/50 dark:bg-blue-900/20 dark:text-blue-300 dark:border-blue-700/50"
       case 'purple':
-        return "bg-purple-50 text-purple-700 border-purple-200/50"
+        return "bg-purple-50 text-purple-700 border-purple-200/50 dark:bg-purple-900/20 dark:text-purple-300 dark:border-purple-700/50"
       case 'green':
-        return "bg-emerald-50 text-emerald-700 border-emerald-200/50"
+        return "bg-emerald-50 text-emerald-700 border-emerald-200/50 dark:bg-emerald-900/20 dark:text-emerald-300 dark:border-emerald-700/50"
       case 'orange':
-        return "bg-orange-50 text-orange-700 border-orange-200/50"
+        return "bg-orange-50 text-orange-700 border-orange-200/50 dark:bg-orange-900/20 dark:text-orange-300 dark:border-orange-700/50"
       case 'red':
-        return "bg-red-50 text-red-700 border-red-200/50"
+        return "bg-red-50 text-red-700 border-red-200/50 dark:bg-red-900/20 dark:text-red-300 dark:border-red-700/50"
       default:
-        return "bg-gray-50 text-gray-700 border-gray-200/50"
+        return "bg-gray-50 text-gray-700 border-gray-200/50 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600/50"
     }
   }
 

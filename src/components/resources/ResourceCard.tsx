@@ -15,11 +15,11 @@ const ResourceCard = ({ resource }: ResourceCardProps) => {
   }
 
   return (
-    <div className="group relative bg-gradient-to-br from-white to-gray-50/30 rounded-3xl border border-gray-200/40 hover:border-gray-300/60 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden h-full">
+    <div className="group relative bg-gradient-to-br from-white to-gray-50/30 dark:from-gray-800 dark:to-gray-900/30 rounded-3xl border border-gray-200/40 dark:border-gray-700/40 hover:border-gray-300/60 dark:hover:border-gray-600/60 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden h-full">
       <div className="p-6 flex flex-col h-full">
         {/* Header: Logo & Value */}
         <div className="flex items-start justify-between mb-4">
-          <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-gray-100 to-gray-200/50 border border-gray-200/60 flex items-center justify-center shadow-sm">
+          <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-gray-100 to-gray-200/50 dark:from-gray-700 dark:to-gray-600/50 border border-gray-200/60 dark:border-gray-600/60 flex items-center justify-center shadow-sm">
             <img 
               src={resource.icon} 
               alt={`${resource.name} logo`}
@@ -30,7 +30,7 @@ const ResourceCard = ({ resource }: ResourceCardProps) => {
                 e.currentTarget.nextElementSibling?.classList.remove('hidden');
               }}
             />
-            <div className="hidden w-6 h-6 bg-gray-300 rounded-lg flex items-center justify-center text-gray-600 text-xs font-bold">
+            <div className="hidden w-6 h-6 bg-gray-300 dark:bg-gray-600 rounded-lg flex items-center justify-center text-gray-600 dark:text-gray-300 text-xs font-bold">
               {resource.name.charAt(0)}
             </div>
           </div>
@@ -43,12 +43,12 @@ const ResourceCard = ({ resource }: ResourceCardProps) => {
         </div>
 
         {/* Title */}
-        <h3 className="font-bold text-base text-gray-900 leading-tight mb-2">
+        <h3 className="font-bold text-base text-gray-900 dark:text-gray-100 leading-tight mb-2">
           {resource.name}
         </h3>
 
         {/* Description */}
-        <p className="text-gray-600 leading-relaxed mb-4 flex-1 text-xs">
+        <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4 flex-1 text-xs">
           {resource.description}
         </p>
 
@@ -58,7 +58,7 @@ const ResourceCard = ({ resource }: ResourceCardProps) => {
             <TagBadge key={index} tag={tag} className="text-xs" />
           ))}
           {resource.tags.length > 3 && (
-            <span className="text-xs text-gray-400 bg-gray-100 px-2 py-1 rounded-md">
+            <span className="text-xs text-gray-400 dark:text-gray-500 bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded-md">
               +{resource.tags.length - 3}
             </span>
           )}
