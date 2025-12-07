@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="upside-down">
       <body
         className={`${inter.variable} font-sans antialiased`}
       >
