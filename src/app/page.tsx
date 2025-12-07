@@ -1,4 +1,5 @@
 import ResourceTable from "@/components/resources/ResourceTable"
+import Image from "next/image"
 
 export default function Home() {
   return (
@@ -28,10 +29,19 @@ export default function Home() {
             Trusted by 5,000+ builders
           </div>
 
-          <h1 className="text-3xl md:text-6xl font-bold text-gray-900 mb-3 tracking-tight leading-tight">
-            Find anything you need<br/>
-            <span className="text-gray-600">to build for free</span>
-          </h1>
+          <div className="flex items-center justify-center gap-4 mb-3">
+            <h1 className="text-3xl md:text-6xl font-bold text-gray-900 tracking-tight leading-tight">
+              Find anything you need<br/>
+              <span className="text-gray-600">to build for free</span>
+            </h1>
+            <Image
+              src="/images/labubu/labubu-3.png"
+              alt="Labubu mascot"
+              width={100}
+              height={100}
+              className="hidden md:block drop-shadow-lg"
+            />
+          </div>
           
           <p className="text-md text-gray-500 mb-6 max-w-xl mx-auto">
             Free tools, API credits, and resources for builders
@@ -40,7 +50,25 @@ export default function Home() {
       </div>
 
       {/* Content Section */}
-      <div className="container mx-auto px-6 pb-20 max-w-6xl">
+      <div className="container mx-auto px-6 pb-20 max-w-6xl relative">
+        <div className="absolute left-0 top-10 opacity-60 hidden lg:block">
+          <Image
+            src="/images/labubu/labubu-4.png"
+            alt="Labubu decoration"
+            width={70}
+            height={70}
+            className="drop-shadow-lg"
+          />
+        </div>
+        <div className="absolute right-0 top-20 opacity-60 hidden lg:block">
+          <Image
+            src="/images/labubu/labubu-5.png"
+            alt="Labubu decoration"
+            width={70}
+            height={70}
+            className="drop-shadow-lg"
+          />
+        </div>
         <ResourceTable />
       </div>
     </div>
