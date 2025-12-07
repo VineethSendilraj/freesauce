@@ -120,3 +120,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+.binary-text {
+  font-family: monospace;
+  letter-spacing: 0.1em;
+}
