@@ -37,8 +37,8 @@ const CategoryFilter = ({ onCategoryFilter }: CategoryFilterProps) => {
           className={`px-4 py-2 text-sm font-medium rounded-full transition-all duration-200 ${
             (category === "All Categories" && selectedCategory === null) ||
             (category === selectedCategory)
-              ? 'bg-blue-500 text-white shadow-sm'
-              : 'bg-gray-100 text-gray-600 hover:bg-gray-200 hover:text-gray-900'
+              ? 'bg-primary text-primary-foreground shadow-sm'
+              : 'bg-muted text-muted-foreground hover:bg-accent hover:text-accent-foreground'
           }`}
         >
           {category}
