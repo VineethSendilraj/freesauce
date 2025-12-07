@@ -14,12 +14,12 @@ const ResourceListItem = ({ resource }: ResourceListItemProps) => {
   }
 
   return (
-    <div className="group bg-white border border-gray-200/40 hover:border-gray-300/60 hover:shadow-sm transition-all duration-200 rounded-lg overflow-hidden">
+    <div className="group bg-card border border-border hover:border-border hover:shadow-sm transition-all duration-200 rounded-lg overflow-hidden">
       <div className="p-3">
         <div className="grid grid-cols-12 gap-4 items-center">
           {/* Resource (Logo & Name) */}
           <div className="col-span-3 flex items-center gap-2 min-w-0">
-            <div className="w-8 h-8 flex-shrink-0 rounded-md overflow-hidden bg-gray-50 flex items-center justify-center border border-gray-200/40">
+            <div className="w-8 h-8 flex-shrink-0 rounded-md overflow-hidden bg-muted flex items-center justify-center border border-border">
               <img 
                 src={resource.icon} 
                 alt={`${resource.name} logo`}
@@ -29,12 +29,12 @@ const ResourceListItem = ({ resource }: ResourceListItemProps) => {
                   e.currentTarget.nextElementSibling?.classList.remove('hidden');
                 }}
               />
-              <div className="hidden w-5 h-5 bg-gray-300 rounded flex items-center justify-center text-gray-600 text-xs font-bold">
+              <div className="hidden w-5 h-5 bg-muted rounded flex items-center justify-center text-muted-foreground text-xs font-bold">
                 {resource.name.charAt(0)}
               </div>
             </div>
             <div className="min-w-0">
-              <h3 className="font-medium text-gray-900 text-sm leading-tight">
+              <h3 className="font-medium text-card-foreground text-sm leading-tight">
                 {resource.name}
               </h3>
             </div>
@@ -42,7 +42,7 @@ const ResourceListItem = ({ resource }: ResourceListItemProps) => {
 
           {/* Description */}
           <div className="col-span-4">
-            <p className="text-sm text-gray-600 leading-relaxed">
+            <p className="text-sm text-muted-foreground leading-relaxed">
               {resource.description}
             </p>
           </div>
@@ -54,7 +54,7 @@ const ResourceListItem = ({ resource }: ResourceListItemProps) => {
                 <TagBadge key={index} tag={tag} />
               ))}
               {resource.tags.length > 3 && (
-                <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
+                <span className="text-xs text-muted-foreground bg-muted px-2 py-1 rounded-full">
                   +{resource.tags.length - 3}
                 </span>
               )}
@@ -64,7 +64,7 @@ const ResourceListItem = ({ resource }: ResourceListItemProps) => {
           {/* Value */}
           <div className="col-span-1 text-center">
             {resource.value && (
-              <span className="text-sm font-semibold text-gray-900 bg-gray-50 px-3 py-1.5 rounded-lg">
+              <span className="text-sm font-semibold text-foreground bg-muted px-3 py-1.5 rounded-lg">
                 {resource.value}
               </span>
             )}
@@ -72,9 +72,9 @@ const ResourceListItem = ({ resource }: ResourceListItemProps) => {
 
           {/* Apply Button */}
           <div className="col-span-1 flex justify-center">
-            <Button 
+            <Button
               onClick={handleApplyClick}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 text-sm font-medium rounded-lg shadow-sm hover:shadow-md transition-all duration-200"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 text-sm font-medium rounded-lg shadow-sm hover:shadow-md transition-all duration-200"
             >
               Apply
             </Button>

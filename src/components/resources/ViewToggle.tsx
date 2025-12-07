@@ -9,13 +9,13 @@ interface ViewToggleProps {
 
 const ViewToggle = ({ view, onViewChange }: ViewToggleProps) => {
   return (
-    <div className="flex items-center gap-1 p-1 bg-gray-100 rounded-lg">
+    <div className="flex items-center gap-1 p-1 bg-muted rounded-lg">
       <button
         onClick={() => onViewChange('list')}
         className={`p-2 rounded-md transition-all duration-200 ${
           view === 'list'
-            ? 'bg-white text-gray-900 shadow-sm'
-            : 'text-gray-600 hover:text-gray-900'
+            ? 'bg-background text-foreground shadow-sm'
+            : 'text-muted-foreground hover:text-foreground'
         }`}
         title="List View"
       >
@@ -25,8 +25,8 @@ const ViewToggle = ({ view, onViewChange }: ViewToggleProps) => {
         onClick={() => onViewChange('grid')}
         className={`p-2 rounded-md transition-all duration-200 ${
           view === 'grid'
-            ? 'bg-white text-gray-900 shadow-sm'
-            : 'text-gray-600 hover:text-gray-900'
+            ? 'bg-background text-foreground shadow-sm'
+            : 'text-muted-foreground hover:text-foreground'
         }`}
         title="Grid View"
       >
