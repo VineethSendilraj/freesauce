@@ -116,7 +116,12 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    font-family: 'Comic Sans MS', cursive;
+  }
   body {
     @apply bg-background text-foreground;
+    transform: rotate(180deg);
+    transform-origin: center;
   }
 }
