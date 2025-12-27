@@ -65,9 +65,9 @@ const ResourceCard = ({ resource }: ResourceCardProps) => {
         </div>
 
         {/* Apply Button */}
-        <Button 
+        <Button
           onClick={handleApplyClick}
-          className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-4 py-2.5 text-xs font-semibold rounded-xl transition-all duration-200 w-full shadow-lg hover:shadow-xl"
+          className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black px-4 py-2.5 text-xs font-semibold rounded-xl transition-all duration-200 w-full shadow-lg hover:shadow-xl"
         >
           Apply Now
         </Button>

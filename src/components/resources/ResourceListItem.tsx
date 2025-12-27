@@ -72,9 +72,9 @@ const ResourceListItem = ({ resource }: ResourceListItemProps) => {
 
           {/* Apply Button */}
           <div className="col-span-1 flex justify-center">
-            <Button 
+            <Button
               onClick={handleApplyClick}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 text-sm font-medium rounded-lg shadow-sm hover:shadow-md transition-all duration-200"
+              className="bg-orange-500 hover:bg-orange-600 text-black px-4 py-2 text-sm font-medium rounded-lg shadow-sm hover:shadow-md transition-all duration-200"
             >
               Apply
             </Button>
