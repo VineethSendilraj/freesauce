@@ -48,6 +48,9 @@ const ResourceTable = () => {
 
   return (
     <div className="w-full space-y-8">
+      {/* Filter Tabs */}
+      <FilterTabs activeFilter={activeFilter} onFilterChange={handleFilterChange} />
+
       {/* Search Bar */}
       <SearchBar onSearch={handleSearch} />
 
@@ -60,19 +63,19 @@ const ResourceTable = () => {
       {view === 'list' && (
         <div className="hidden lg:block mb-2">
           <div className="grid grid-cols-12 gap-4 px-3">
-            <div className="col-span-3 text-xs font-bold text-gray-700 uppercase tracking-wider">
+            <div className="col-span-3 text-xs font-bold text-muted-foreground uppercase tracking-wider">
               Resource
             </div>
-            <div className="col-span-4 text-xs font-bold text-gray-700 uppercase tracking-wider">
+            <div className="col-span-4 text-xs font-bold text-muted-foreground uppercase tracking-wider">
               Description
             </div>
-            <div className="col-span-3 text-xs font-bold text-gray-700 uppercase tracking-wider">
+            <div className="col-span-3 text-xs font-bold text-muted-foreground uppercase tracking-wider">
               Tags
             </div>
-            <div className="col-span-1 text-xs font-bold text-gray-700 uppercase tracking-wider text-center">
+            <div className="col-span-1 text-xs font-bold text-muted-foreground uppercase tracking-wider text-center">
               Value
             </div>
-            <div className="col-span-1 text-xs font-bold text-gray-700 uppercase tracking-wider text-center">
+            <div className="col-span-1 text-xs font-bold text-muted-foreground uppercase tracking-wider text-center">
               Action
             </div>
           </div>
@@ -82,7 +85,7 @@ const ResourceTable = () => {
       {/* Resources */}
       {filteredResources.length === 0 ? (
         <div className="text-center py-12">
-          <p className="text-gray-500">No resources found for this category.</p>
+          <p className="text-muted-foreground">No resources found for this category.</p>
         </div>
       ) : view === 'grid' ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

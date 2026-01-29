@@ -9,13 +9,13 @@ interface FilterTabsProps {
 
 const FilterTabs = ({ activeFilter, onFilterChange }: FilterTabsProps) => {
   return (
-    <div className="flex items-center gap-2 p-1 bg-gray-100 rounded-full w-fit">
+    <div className="flex items-center gap-2 p-1 bg-muted rounded-full w-fit">
       <button
         onClick={() => onFilterChange('all')}
         className={`px-6 py-2 text-sm font-medium rounded-full transition-all duration-200 ${
           activeFilter === 'all'
-            ? 'bg-white text-gray-900 shadow-sm'
-            : 'text-gray-600 hover:text-gray-900'
+            ? 'bg-background text-foreground shadow-sm'
+            : 'text-muted-foreground hover:text-foreground'
         }`}
       >
         All
@@ -24,8 +24,8 @@ const FilterTabs = ({ activeFilter, onFilterChange }: FilterTabsProps) => {
         onClick={() => onFilterChange('free-stuff')}
         className={`px-6 py-2 text-sm font-medium rounded-full transition-all duration-200 ${
           activeFilter === 'free-stuff'
-            ? 'bg-white text-gray-900 shadow-sm'
-            : 'text-gray-600 hover:text-gray-900'
+            ? 'bg-background text-foreground shadow-sm'
+            : 'text-muted-foreground hover:text-foreground'
         }`}
       >
         Free Stuff
@@ -34,8 +34,8 @@ const FilterTabs = ({ activeFilter, onFilterChange }: FilterTabsProps) => {
         onClick={() => onFilterChange('fellowships')}
         className={`px-6 py-2 text-sm font-medium rounded-full transition-all duration-200 ${
           activeFilter === 'fellowships'
-            ? 'bg-white text-gray-900 shadow-sm'
-            : 'text-gray-600 hover:text-gray-900'
+            ? 'bg-background text-foreground shadow-sm'
+            : 'text-muted-foreground hover:text-foreground'
         }`}
       >
         Fellowships
