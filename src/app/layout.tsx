@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { FlipWrapper } from "@/components/layout/FlipWrapper";
 import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
@@ -25,11 +26,13 @@ export default function RootLayout({
       <body
         className={`${inter.variable} font-sans antialiased`}
       >
-        <Header />
-        <main className="min-h-screen">
-          {children}
-        </main>
-        <Footer />
+        <FlipWrapper>
+          <Header />
+          <main className="min-h-screen">
+            {children}
+          </main>
+          <Footer />
+        </FlipWrapper>
         <Analytics />
       </body>
     </html>

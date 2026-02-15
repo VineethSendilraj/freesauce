@@ -120,3 +120,33 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  /* Flip animation classes */
+  .flip-container {
+    transform-origin: center center;
+    transition: transform 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    will-change: transform;
+  }
+
+  .flip-container.flipped {
+    transform: rotate(180deg);
+  }
+
+  /* Prevent text selection and scrolling issues during flip */
+  .flip-container.flipping {
+    pointer-events: none;
+    user-select: none;
+  }
+
+  /* Ensure flip button stays accessible during flip */
+  .flip-button {
+    transform-origin: center center;
+    position: fixed;
+    z-index: 9999;
+  }
+
+  .flip-button.flipped {
+    transform: rotate(180deg);
+  }
+}
