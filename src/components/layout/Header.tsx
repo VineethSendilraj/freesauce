@@ -2,6 +2,7 @@
 
 import { GraduationCap, Plus } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import FontSwitcher from "@/components/ui/FontSwitcher"
 
 const Header = () => {
   const handleSubmitResource = () => {
@@ -29,6 +30,7 @@ const Header = () => {
             >
               About
             </a>
+            <FontSwitcher />
             
             <Button
               onClick={handleSubmitResource}
