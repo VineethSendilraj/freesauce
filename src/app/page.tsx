@@ -1,4 +1,5 @@
 import ResourceTable from "@/components/resources/ResourceTable"
+import { FlipButton } from "@/components/ui/flip-button"
 
 export default function Home() {
   return (
@@ -43,6 +44,9 @@ export default function Home() {
       <div className="container mx-auto px-6 pb-20 max-w-6xl">
         <ResourceTable />
       </div>
+
+      {/* Flip Button */}
+      <FlipButton />
     </div>
   )
 }
