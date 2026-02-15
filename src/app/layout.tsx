@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Analytics } from "@vercel/analytics/next";
+import { FontPreferenceProvider } from "@/components/layout/FontPreferenceProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -22,15 +23,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.variable} font-sans antialiased`}
-      >
-        <Header />
-        <main className="min-h-screen">
-          {children}
-        </main>
-        <Footer />
-        <Analytics />
+      <body className={`${inter.variable} font-sans antialiased`}>
+        <FontPreferenceProvider>
+          <Header />
+          <main className="min-h-screen">{children}</main>
+          <Footer />
+          <Analytics />
+        </FontPreferenceProvider>
       </body>
     </html>
   );

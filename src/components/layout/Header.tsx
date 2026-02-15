@@ -2,8 +2,12 @@
 
 import { GraduationCap, Plus } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { FontSelector } from "@/components/ui/font-selector"
+import { useFontPreference } from "./FontPreferenceProvider"
 
 const Header = () => {
+  const { preference, setPreference } = useFontPreference()
+
   const handleSubmitResource = () => {
     // Replace with actual Google Form URL
     window.open('https://forms.gle/fLe5ZLhi9ihfx27t5', '_blank', 'noopener,noreferrer')
@@ -29,14 +33,16 @@ const Header = () => {
             >
               About
             </a>
-            
-            <Button
-              onClick={handleSubmitResource}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1.5 text-sm font-medium rounded-md shadow-sm hover:shadow-md transition-all duration-200 inline-flex items-center gap-1.5"
-            >
-              <Plus className="h-3 w-3" />
-              Submit Resource
-            </Button>
+            <div className="flex items-center gap-3">
+              <FontSelector value={preference} onChange={setPreference} />
+              <Button
+                onClick={handleSubmitResource}
+                className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1.5 text-sm font-medium rounded-md shadow-sm hover:shadow-md transition-all duration-200 inline-flex items-center gap-1.5"
+              >
+                <Plus className="h-3 w-3" />
+                Submit Resource
+              </Button>
+            </div>
           </nav>
         </div>
       </div>
