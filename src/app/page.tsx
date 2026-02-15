@@ -39,6 +39,12 @@ export default function Home() {
         </div>
       </div>
 
+      <div className="centered-cta-wrapper">
+        <button type="button" className="centered-cta-button">
+          Click Me
+        </button>
+      </div>
+
       {/* Content Section */}
       <div className="container mx-auto px-6 pb-20 max-w-6xl">
         <ResourceTable />

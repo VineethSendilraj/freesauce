@@ -120,3 +120,34 @@
     @apply bg-background text-foreground;
   }
 }
+
+.centered-cta-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.centered-cta-button {
+  background-color: #dc2626;
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0.95rem 2.75rem;
+  border-radius: 9999px;
+  border: none;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.centered-cta-button:hover {
+  background-color: #b91c1c;
+  transform: translateY(-1px);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.25);
+}
+
+.centered-cta-button:focus-visible {
+  outline: 3px solid #fcd34d;
+  outline-offset: 3px;
+}
