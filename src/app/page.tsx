@@ -1,4 +1,5 @@
 import ResourceTable from "@/components/resources/ResourceTable"
+import { Button } from "@/components/ui/button"
 
 export default function Home() {
   return (
@@ -36,6 +37,12 @@ export default function Home() {
           <p className="text-md text-gray-500 mb-6 max-w-xl mx-auto">
             Free tools, API credits, and resources for builders
           </p>
+
+          <div className="checkout-section">
+            <Button variant="checkout" className="checkout-button" type="button">
+              Checkout Now
+            </Button>
+          </div>
         </div>
       </div>
 
